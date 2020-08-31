@@ -76,23 +76,6 @@ class AppointmentController {
         order: [['id', 'DESC']],
       });
 
-      // Dados necessários para salt de dias
-
-      //   const dayNow = format(date, 'EEEE', { locale: pt });
-
-      //   if (dayNow === 'sábado') {
-      //     const dia = addDays(date, 2);
-      //     const endDay = endOfDay(subHours(dia, 3));
-      //     const dayIncremented = addHours(endDay, 7);
-      //     const newDay = format(dayIncremented, 'EEEE', { locale: pt });
-      //     const appointment = await Appointment.create({
-      //       day: newDay,
-      //       date: dayIncremented,
-      //       user_id: request.userId,
-      //     });
-      //     return response.json(appointment);
-      //   }
-
       const dia = startOfHour(date);
       const dayIncremented = addHours(dia, 1);
       const newDay = format(dayIncremented, 'EEEE', { locale: pt });
