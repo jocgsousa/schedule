@@ -1,5 +1,5 @@
 import {
-  startOfHour, parseISO, endOfToday, endOfDay, subHours, addHours, format, addDays, isAfter,
+  startOfHour, endOfDay, subHours, addHours, format, addDays, isAfter,
 } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 
